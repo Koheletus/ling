@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+.header {
+  color: rgb(98, 137, 85);
+  font-family: "Lucida Console", "Courier New", "Hind", monospace;
+  font-size: 40px;
+  font-weight: 100;
+  padding-top: 40px;
+}
+
+.ipa {
+  color: rgb(189, 82, 75);
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: lighter;
+  font-size: 35px
+}
+
+body {
+}
