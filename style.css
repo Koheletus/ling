@@ -3,10 +3,29 @@
 
 .header {
   color: rgb(98, 137, 85);
-  font-family: "Lucida Console", "Courier New", "Hind", monospace;
+  padding-left: 20%;
+}
+
+.chunk {
+  position: relative;
+  width: 50%;
   font-size: 40px;
   font-weight: 100;
-  padding-top: 40px;
+  top: 40px;
+  line-height: 1.5;
+  float: left;
+}
+
+.chinese-header {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 80px;
+  font-family: STSONG,SIMSUN,times;
+  font-weight: 400;
+  width: 20%;
+  padding-top: 5%;
+  float: left;
+  clear: right;
 }
 
 .ipa {
@@ -16,5 +35,86 @@
   font-size: 35px
 }
 
+/*body paragraph*/
+
+.bottomchunk {
+  left: 10%;
+  padding-left: 5%;
+  padding-right: 10%;
+  padding-top: 20px;
+  position: relative;
+  float: left;
+  border-top: 2px dashed rgb(189, 82, 75)
+}
+
+.links {
+  width: 20%;
+  float: left;
+}
+a {
+  line-height: 2;
+  color: rgb(189, 82, 75);
+  font-family: "Lucida Console", "Courier New", "Hind", monospace;
+  font-size: 20px;
+  text-decoration: none;
+}
+a:hover {
+  font-style: italic;
+  font-weight: bold;
+}
+a:visited {
+  text-decoration: none;
+}
+
+p {
+  /*top: 30em;*/
+  width: 80%;
+  color: rgb(98, 137, 85);
+  float: left;
+}
+
 body {
+  font-family: "Lucida Console", "Courier New", "Hind", monospace;
+}
+
+/*header animation*/
+.move2 {
+  padding-left: 200px;
+  transition: padding 1s;
+}
+.move1 {
+  padding-left: 100px;
+  transition: padding 1s;
+}
+.move0 {
+  transition: padding 1s;
+}
+.move-1 {
+  padding-left: 100px;
+  transition: padding 1s;
+}
+.move-2 {
+  padding-left: 200px;
+  transition: padding 1s;
+}
+
+.chunk:hover .move2 {
+  padding-left: 0px;
+  transition: 1s;
+}
+.chunk:hover .move1 {
+  padding-left: 50px;
+  transition: 1s;
+}
+.chunk:hover .move0 {
+  padding-left: 100px;
+  transition: 1s;
+}
+.chunk:hover .move-1 {
+  padding-left: 150px;
+  transition: 1s;
+}
+.chunk:hover > .move-2 {
+  padding-left: 200px;
+  transition: 1s;
 }
