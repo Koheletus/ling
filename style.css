@@ -1,60 +1,146 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Harmattan:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap');
 
 .header {
   color: rgb(98, 137, 85);
-  padding-left: 20%;
+  padding-left: 10%;
 }
 
+body{
+}
+
+.bodytext{
+  font-size: 20px;
+}
+
+
 .chunk {
+  display: table;
   position: relative;
-  width: 50%;
+  width: 60%;
   font-size: 40px;
   font-weight: 100;
   top: 40px;
   line-height: 1.5;
   float: left;
+  padding-left: 5%;
+  padding-bottom: 1em;
+  /*background: lightblue;*/
+  margin-bottom: 1.5em;
 }
 
 .chinese-header {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  font-size: 80px;
-  font-family: STSONG,SIMSUN,times;
-  font-weight: 400;
-  width: 20%;
-  padding-top: 5%;
-  float: left;
-  clear: right;
+  position: absolute;
+  top: 2em;
+  right: 8vw;
+  width: 260px;
+  rt{
+    margin-left: 1px;
+    color: rgb(189, 82, 75)
+  }
+  .welcomecn{
+    display:flex;
+    position: relative;
+    float: right;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 80px;
+    font-family: STSONG,SIMSUN,times;
+    font-weight: 300;
+    height:4em;
+    /*float: left;
+    clear: right;
+    margin-left: 20px;*/
+    color: rgb(98, 137, 85);
+  }
+  .vertical {
+    margin-top: 4px;
+    display: flex;
+    position: relative;
+    font-family: "LXGW WenKai Mono TC", serif;
+    font-weight: 400;
+    font-size: 30px;
+    height: 10em;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    line-height: 1.7;
+    color: rgb(189, 82, 75);
+    .ipa {
+      font-size:12px;
+      color: rgb(98, 137, 85);
+    }
+  }
 }
 
+
 .ipa {
-  color: rgb(189, 82, 75);
+  color: #557C89;
   font-family: 'Noto Sans', sans-serif;
-  font-weight: lighter;
+  font-weight: normal;
   font-size: 35px
 }
 
 /*body paragraph*/
 
 .bottomchunk {
-  left: 10%;
-  padding-left: 5%;
-  padding-right: 10%;
+  /*left: 7%;*/
+  display: table;
+  width: 80vw;
+  padding-left: 2%;
+  margin-right: 2%;
   padding-top: 20px;
   position: relative;
   float: left;
+  /*background: lightblue;*/
   border-top: 2px dashed rgb(189, 82, 75)
 }
 
-.links {
-  width: 20%;
-  float: left;
+.intro {
+  width:63%;
+  float:left;
+    margin-top: 5px;
 }
+
+.links {
+  width: 15%;
+  float: left;
+  position: relative;
+}
+
+.red {
+  color: rgb(189, 82, 75);
+  font-family: "LXGW WenKai Mono TC", serif;
+  font-weight: normal;
+  font-size: 13px;
+}
+
+figure {
+  position: relative;
+  float:left;
+  width: 14%;
+  margin-top: 10px;
+  margin-left: 2.5%;
+    img {
+      position: relative;
+      padding: 2px;
+      width: 95%;
+      border: 2px solid rgb(98, 137, 85);
+      }
+    figcaption{
+      position: relative;
+      width: 95%;
+      text-align: center;
+      font-family: Times;
+    }
+}
+
+
 a {
   line-height: 2;
   color: rgb(189, 82, 75);
-  font-family: "Lucida Console", "Courier New", "Hind", monospace;
+  font-family: "Lucida Console", "Courier New", monospace;
   font-size: 20px;
   text-decoration: none;
 }
@@ -67,54 +153,141 @@ a:visited {
 }
 
 p {
-  /*top: 30em;*/
-  width: 80%;
   color: rgb(98, 137, 85);
-  float: left;
 }
 
 body {
-  font-family: "Lucida Console", "Courier New", "Hind", monospace;
+  font-family: "Lucida Console", "Courier New", monospace;
 }
 
 /*header animation*/
+.move {
+  margin-left: 40px;
+}
 .move2 {
-  padding-left: 200px;
-  transition: padding 1s;
+  font-family: "Harmattan";
+  font-weight: lighter;
+  margin-left: 40%;
+  transition: margin-left 1s ease;
 }
 .move1 {
-  padding-left: 100px;
-  transition: padding 1s;
+  margin-left: 20%;
+  transition: margin-left 1s ease;
 }
 .move0 {
-  transition: padding 1s;
+  transition: margin-left 1s ease;
 }
 .move-1 {
-  padding-left: 100px;
-  transition: padding 1s;
-}
-.move-2 {
-  padding-left: 200px;
-  transition: padding 1s;
+  /*padding-left: 100px;*/
+  position: relative;
+  top: 1em;
+  .ipa {
+    font-size: 20px;
+  }
 }
 
-.chunk:hover .move2 {
-  padding-left: 0px;
-  transition: 1s;
+
+.move:hover .move2 {
+  margin-left: 0px;
 }
-.chunk:hover .move1 {
-  padding-left: 50px;
-  transition: 1s;
+.move:hover .move1 {
+  margin-left: 7%;
 }
-.chunk:hover .move0 {
-  padding-left: 100px;
-  transition: 1s;
+.move:hover .move0 {
+  margin-left: 20%;
 }
-.chunk:hover .move-1 {
+/*.chunk:hover .move-1 {
   padding-left: 150px;
   transition: 1s;
 }
 .chunk:hover > .move-2 {
-  padding-left: 200px;
-  transition: 1s;
+  margin-left: 200px;
+}*/
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 940px) {
+  .header {
+      margin-top: 5%;
+      padding-left: 7vw;
+  }
+  .chunk {
+    font-size: 30px;
+  }
+  .chinese-header {
+    font-weight: regular;
+    width:15vh;
+    .welcomecn {
+      display: inline-flex;
+      font-size: 65px;
+      vertical-align: top;
+      float:right;
+    }
+    .vertical {
+      display: inline-flex;
+      margin-top: -1em;
+      font-size: 35px;
+      height: 10em;
+      padding-right: 5px;
+      line-height: 1.7;
+      vertical-align: bottom;
+      /*white-space: nowrap;*/
+      float:right;
+      position: relative;
+      color: rgb(189, 82, 75);
+      .ipa {
+        font-size:16px;
+        color: rgb(98, 137, 85);
+      }
+    }
+  }
+
+  .bottomchunk {
+    margin-top: 10px;
+    width:60%;
+    background: lightblue;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .header{
+    padding-left: 5vw;
+  }
+  .chunk{
+    font-size: 20px;
+  }
+  .bodytext{
+    font-size: 15px;
+  }
+  .ipa {
+    font-size: 15px;
+  }
+  .chinese-header{
+    right: 4vw;
+    padding-top: 4px;
+    .welcomecn{
+      font-size: 35px;
+    }
+    .vertical{
+      font-size: 16px;
+      margin-top: -1cem;
+      .ipa {
+        font-size: 8px;
+      }
+    }
+  }
+  .bottomchunk{
+    left:5vw;
+    width:85vw;
+    padding-left: 0px;
+  }
+  .links{
+    background: blue;
+  }
+  .intro{
+    left:28px;
+    position:relative;
+    float: left;
+    background:blue;
+  }
 }
