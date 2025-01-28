@@ -120,7 +120,7 @@ body{
   width: 15%;
   float: left;
   top: 0.7em;
-  line-height: 4;
+  line-height: 1;
   position: relative;
 }
 
@@ -129,6 +129,11 @@ body{
   font-family: "LXGW WenKai Mono TC", serif;
   font-weight: normal;
   font-size: 11px;
+}
+.web{
+  display: inline-block;
+  margin-bottom: 1em;
+  text-align: center;
 }
 
 figure {
@@ -154,12 +159,13 @@ figure > figcaption{
 
 
 a {
-  line-height: 2;
+  line-height: 1;
   color: rgb(189, 82, 75);
   font-family: monospace;
   font-size: 20px;
   text-decoration: none;
 }
+
 a:hover {
   font-style: italic;
   font-weight: bold;
@@ -173,7 +179,7 @@ p {
 }
 
 body {
-  font-family: "Lucida Console", "Courier New", monospace;
+  font-family: monospace;
 }
 
 /*header animation*/
