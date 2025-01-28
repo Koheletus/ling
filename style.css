@@ -15,7 +15,6 @@ body{
   font-size: 20px;
 }
 
-
 .chunk {
   display: table;
   position: relative;
@@ -53,7 +52,7 @@ body{
     writing-mode: vertical-rl;
     text-orientation: mixed;
     font-size: 80px;
-    font-family: STSONG,SIMSUN,times;
+    font-family: serif;
     font-weight: 300;
     height:4em;
     /*float: left;
@@ -72,12 +71,17 @@ body{
     writing-mode: vertical-rl;
     text-orientation: mixed;
     line-height: 1.7;
-    color: rgb(189, 82, 75);
+    /*color: rgb(189, 82, 75);*/
+    color: rgb(98, 137, 85);
     }
 .vertical .ipa {
       font-size:12px;
       color: rgb(189, 82, 75);
+      /*color: rgb(98, 137, 85);*/
     }
+  .chinese-header .introcn {
+    display: none;
+  }
 
 
 .ipa {
@@ -219,87 +223,132 @@ body {
 /* RESPONSIVE DESIGN */
 @media (max-width: 940px) {
   .header {
-      margin-top: 5%;
-      padding-left: 7vw;
   }
   .chunk {
-    font-size: 30px;
   }
   .chinese-header {
     font-weight: regular;
-    width:15vh;
-    .welcomecn {
+    width:15vh;}
+
+  .chinese-header .welcomecn {
       display: inline-flex;
       font-size: 65px;
       vertical-align: top;
       float:right;
+      margin-bottom: -0.5em;
     }
-    .vertical {
+  .chinese-header .vertical {
       display: inline-flex;
-      margin-top: -1em;
       font-size: 35px;
       height: 10em;
-      padding-right: 5px;
       line-height: 1.7;
       vertical-align: bottom;
       /*white-space: nowrap;*/
       float:right;
       position: relative;
       color: rgb(189, 82, 75);
-      .ipa {
-        font-size:16px;
-        color: rgb(98, 137, 85);
-      }
     }
-  }
+    .chinese-header .vertical .ipa {
+        font-size:16px;
+      }
 
   .bottomchunk {
-    margin-top: 10px;
-    width:60%;
-    background: lightblue;
-  }
 
+  }
 }
 
 @media (max-width: 480px) {
   .header{
     padding-left: 5vw;
+    font-size:10px;
   }
   .chunk{
+    background: skyblue;
+    width: 60vw;
+    padding: 0vw;
     font-size: 20px;
   }
-  .bodytext{
+    .bodytext{
     font-size: 15px;
-  }
-  .ipa {
-    font-size: 15px;
-  }
-  .chinese-header{
-    right: 4vw;
-    padding-top: 4px;
-    .welcomecn{
-      font-size: 35px;
     }
-    .vertical{
-      font-size: 16px;
-      margin-top: -1cem;
-      .ipa {
-        font-size: 8px;
-      }
+    .ipa {
+      font-size: 15px;
     }
-  }
+    .move{
+      display: none;
+    }
+
+    figure {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      float:left;
+      width: 30vw;
+    }
+    figure > img {
+    }
+    figure > figcaption{
+          font-family: Verdana;
+          font-size: ;
+        }
+
   .bottomchunk{
-    left:5vw;
-    width:85vw;
+    background: skyblue;
+    width: 60vw;
+    left:0vw;
     padding-left: 0px;
   }
   .links{
     background: blue;
+    display: inline-block;
   }
   .intro{
+    width: 50vw;
     left:28px;
+    display: inline-block;
     position:relative;
+    vertical-align: bottom;
     float: left;
-    background:blue;
   }
+  .bottomchunk .intro .introcn {
+    display: none;
+  }
+
+  .chinese-header{
+    right: 2.5vw;
+    width: 23vw;
+    padding-top: 4px;
+    border-left: 4px double rgb(189, 82, 75);
+  }
+  .chinese-header .welcomecn{
+      font-size: 50px;
+
+      margin-right:0px;
+      padding-right:0px;
+      right:0px;
+    }
+  .chinese-header .vertical{
+    display: none;
+    /*float: right;
+    font-size: 20px;
+    height: 7em;
+    margin-top: 10px;*/
+    }
+
+  .chinese-header .introcn{
+    display: inline-block;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    margin-top: 0.5em;
+    height: 22em;
+    position: relative;
+    float:right;
+    color: rgb(98, 137, 85);
+    font-family: serif;
+    margin-right: 2.5vw;
+  }
+  .chinese-header .introcn .red{
+    font-size: 12px;
+  }
+
 }
