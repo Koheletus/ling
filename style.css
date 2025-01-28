@@ -60,7 +60,7 @@ body{
     margin-left: 20px;*/
     color: rgb(98, 137, 85);
   }
-.chinese-header > .vertical {
+.chinese-header .vertical {
     margin-top: 4px;
     display: flex;
     position: relative;
