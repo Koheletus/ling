@@ -31,16 +31,22 @@ body{
   margin-bottom: 1.5em;
 }
 
+.move-1 .ipa {
+  font-size: 18px;
+  margin-bottom: 7px;
+}
+
 .chinese-header {
   position: absolute;
   top: 2em;
   right: 8vw;
   width: 260px;
-  rt{
+}
+.chinese-header rt{
     margin-left: 1px;
     color: rgb(189, 82, 75)
   }
-  .welcomecn{
+.chinese-header > .welcomecn{
     display:flex;
     position: relative;
     float: right;
@@ -55,7 +61,7 @@ body{
     margin-left: 20px;*/
     color: rgb(98, 137, 85);
   }
-  .vertical {
+.chinese-header > .vertical {
     margin-top: 4px;
     display: flex;
     position: relative;
@@ -67,19 +73,18 @@ body{
     text-orientation: mixed;
     line-height: 1.7;
     color: rgb(189, 82, 75);
-    .ipa {
+    }
+.vertical .ipa {
       font-size:12px;
       color: rgb(189, 82, 75);
     }
-  }
-}
 
 
 .ipa {
   color: rgb(98, 137, 85);
   font-family: 'Noto Sans', sans-serif;
   font-weight: normal;
-  font-size: 35px
+  font-size: 35px;
 }
 
 /*body paragraph*/
@@ -128,19 +133,20 @@ figure {
   width: 14%;
   margin-top: 10px;
   margin-left: 2.5%;
-    img {
+}
+figure > img {
       position: relative;
       padding: 2px;
       width: 95%;
       border: 2px solid rgb(98, 137, 85);
       }
-    figcaption{
+figure > figcaption{
       position: relative;
       width: 95%;
       text-align: center;
       font-family: Verdana;
     }
-}
+
 
 
 a {
@@ -190,10 +196,6 @@ body {
   font-family: monospace;
   top: 0.7em;
   font-size: 30px;
-  .ipa {
-    font-size: 18px;
-    margin-bottom: 7px;
-  }
 }
 
 
