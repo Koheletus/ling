@@ -110,7 +110,7 @@ body{
   width:63%;
   float:left;
   margin-top: 5px;
-  font-size: 14px;
+  font-size: 12.5px;
   line-height: 1.5;
   font-weight: 100;
   font-family: Verdana;
@@ -128,7 +128,7 @@ body{
   color: rgb(189, 82, 75);
   font-family: "LXGW WenKai Mono TC", serif;
   font-weight: normal;
-  font-size: 13px;
+  font-size: 11px;
 }
 
 figure {
