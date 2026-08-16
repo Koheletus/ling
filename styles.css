@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Harmattan:wght@400;500;600;700&display=swap');
+
+/* ------------------------------
+   COLOR SYSTEM
+------------------------------ */
+
+:root {
+    /* Porcelain background */
+    --paper: #fdfcf9;
+
+    /* Ink */
+    --ink: #202020;
+    --muted: #777777;
+
+    --blue: #24558a;
+    --yellow: #d1a33a;
+    --red: #b5413b;
+    --black: #202020;
+    --white: #fdfcf9;
+
+    --jade: #3f8068;
+
+    --line: rgba(0, 0, 0, 0.12);
+}
+
+/* ------------------------------
+   GLOBAL
+------------------------------ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    background: var(--paper);
+
+    color: var(--ink);
+
+    font-family: "Garamond", serif;
+
+    font-size: 16px;
+
+    line-height: 1.75;
+}
+
+/* ------------------------------
+   MAIN FRAME
+------------------------------ */
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 50px 120px;
+    border-left: 1px solid rgba(82, 117, 104, 0.35);
+    border-right: 1px solid rgba(82, 117, 104, 0.35);
+}
+
+
+
+/* --------------------------------
+    Navigation tile design
+-------------------------------- */
+
+.nav {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    width: 100%;
+
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid rgba(36, 85, 138, 0.25);
+
+    justify-items: center;
+}
+
+
+.nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: var(--muted);
+    text-decoration: none;
+    border: none;
+}
+
+    /* tile */
+
+    .tile {
+        width: 72px;
+        height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        position: relative;
+        box-shadow:
+            inset 5px 5px 12px rgba(255, 255, 255, 0.35),
+            inset -6px -6px 12px rgba(0, 0, 0, 0.15),
+            0 3px 8px rgba(0, 0, 0, 0.12);
+        overflow: hidden;
+        margin: 0;
+    }
+
+    /* reflection */
+
+    .tile::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.35),
+            transparent 40%
+        );
+    }
+
+    .tile span {
+        width: 45px;
+        height: 45px;
+        border: 1px solid rgba(255, 255, 255, 0.45);
+    }
+
+    /* spade design */
+
+    .tile-blue {
+        background: var(--red);
+    }
+
+    .tile-blue span {
+        transform: rotate(45deg);
+    }
+
+    .tile-yellow {
+        background: var(--yellow);
+    }
+
+    .tile-yellow span {
+        transform: rotate(45deg);
+    }
+
+    .tile-red {
+        background: var(--blue);
+    }
+
+    .tile-red span {
+        transform: rotate(45deg);
+    }
+
+    .tile-black {
+        background: var(--ink);
+    }
+
+    .tile-black span {
+        transform: rotate(45deg);
+    }
+
+    .nav a:hover .tile {
+        transform: translateY(-5px);
+        transition: 0.3s ease;
+    }
+
+/* --------------------------------
+    Headings
+-------------------------------- */
+
+h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 56px;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin: 0 0 12px;
+}
+
+.subtitle {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+/* Stylized intro */
+
+.decorated {
+    margin-left: 10px;
+    position: relative;
+    display: flex;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+.decorated div {
+    margin: 9px;
+    /*background-color: var(--yellow);*/
+    /*border: solid black 2px;*/
+}
+
+.bracket {
+    color: var(--muted);
+}
+
+    /* ------- Chinese block -------- */
+    .chinese-header {
+        float: right;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        width: 24%;
+    }
+
+        .welcomecn {
+            font-size: 30px;
+            font-family: serif;
+            font-weight: 300;
+        }
+
+        .captioncn span{
+            font-size: 22px;
+            font-family: serif;
+            font-weight: 100;
+            display:flex;
+            margin-top: 10px;
+        }
+
+            .line2 {
+                margin-right: -30px;
+            }
+
+
+    .ipa {
+        color: var(--jade);
+    }
+
+    /* ------- mobile-only chinese block -------- */
+    .alternative-cn {
+        display: none;
+    }
+
+    /* ------- multilingual block -------- */
+    .multilang {
+        font-size: 22px;
+        width: 48%;
+        line-height: 1.5;
+    }
+    .multilang span {
+        display: inline-block;
+    }
+
+        .greek {
+            margin-left: 0ch;
+        }
+
+        .sanskrit {
+            margin-left: 1em;
+            margin-top: 10px;
+        }
+
+        .persian {
+            margin-left: 0.8em;
+            font-family: "Harmattan";
+        }
+
+        .salar {
+            margin-left: 1em;
+            margin-top: 6px;
+            font-size: 20px;
+            color:var(--ink);
+            font-family: "Garamond", serif;
+            font-weight: regular;
+        }
+
+            .salar ruby {
+                color: var(--jade);
+            }
+            .salar .ipa {
+                font-size: 15px;
+                font-family: serif;
+                color: var(--muted);
+            }
+
+/* ------------------------------
+   SECTIONS
+------------------------------ */
+
+.section {
+    line-height: 1.5;
+}
+
+.section-title {
+    font-family: "Inter", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 75%;
+    height: 2px;
+    margin-top: 5px;
+    background: linear-gradient(90deg, var(--red), var(--yellow), var(--blue));
+}
+
+/* ------------------------------
+   TEXT
+------------------------------ */
+
+p {
+    max-width: 75%;
+}
+
+/* ------------------------------
+   LINKS
+------------------------------ */
+
+a {
+    color: var(--jade);
+    /*border-bottom: 1px solid rgba(36, 85, 138, 0.3);*/
+}
+
+a:hover {
+    color: var(--red);
+}
+
+.email {
+    color: var(--white);
+    background-color: var(--muted);
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.email:hover {
+    background-color: var(--red);
+}
+
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+
+/* .footer {
+    margin-top: 100px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+    color: var(--muted);
+} */
+
+/* ------------------------------
+   MOBILE
+------------------------------ */
+
+@media (max-width: 730px) {
+    .container {
+        padding: 40px 25px 90px;
+        border-left: none;
+        border-right: none;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .nav a {
+        font-size: 11px;
+    }
+
+/* tiles */
+    .tile {
+        width: 10vw;
+        min-width: 55px;
+        height: 10vw;
+        min-height: 55px;
+    }
+    .tile span {
+        width: 6vw;
+        min-width: 35px;
+        height: 6vw;
+        min-height: 35px;
+
+    }
+
+/* multilingual decoration */
+    .decorated {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    .decorated div {
+        margin-left: 0px;
+    }
+
+/* ------- hides desktop only chinese block -------- */
+    .chinese-header {
+        display: none
+    }
+
+/* ------- mobile only chinese block -------- */
+    .alternative-cn {
+        display: block;
+        float: right;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+    .alternative-cn .welcomecn {
+        font-size: 35px;
+    }
+
+/* ------- multilang block -------- */
+    .multilang {
+        width: 70%;
+        min-width: 11em;
+        font-size: 20px;
+    }
+
+    }
+    .salar {
+        margin-left: 0.8em;
+        font-size: 18px;
+    }
+
+    .section-title::after {
+        width: 90%;
+    }
+    p {
+        max-width: 95%;
+    }
+}
